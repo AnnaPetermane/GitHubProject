@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Informācijas daudzuma mērvienība</title>
+</head>
+<body>
+<header style="background-color: chartreuse;">
+    <style>
+body {
+  background-image: url('cipari.jpg');
+}
+</style>
+<h2>Informācijas daudzuma mērvienība</h2>
+
+<label for="gbInput">Ievadiet gigabaitu skaitu:</label>
+<input type="number" id="gbInput" min="0" size="20">
+
+<p><button onclick="convertToMB()">Pārveidot megabaitos</button></p>
+<p id="mbResult"></p>
+
+<button onclick="convertToMiB()">Pārveidot mibibaitos</button>
+<p id="mibResult"></p>
+
+<script>
+function convertToMB() {
+  var gbInput = document.getElementById("gbInput").value;
+  var mbResult = gbInput * 1024; // 1 gigabait = 1024 megabait
+  document.getElementById("mbResult").innerText = gbInput + " GB = " + mbResult + " MB";
+}
+
+function convertToMiB() {
+  var gbInput = document.getElementById("gbInput").value;
+  var mibResult = gbInput * 1000; // 1 gigabaits = 1000 mibibaits
+  document.getElementById("mibResult").innerText = gbInput + " GB = " + mibResult + " MiB";
+}
+</script>
+
+</body>
+</html>
+
